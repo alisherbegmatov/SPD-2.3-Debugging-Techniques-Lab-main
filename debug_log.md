@@ -1,6 +1,6 @@
 # Debug Log
 
-**Explain how you used the the techniques covered (Trace Forward, Trace Backward, Divide & Conquer) to uncover the bugs in each exercise. Be specific!**
+**Explain how you used the techniques covered (Trace Forward, Trace Backward, Divide & Conquer) to uncover the bugs in each exercise. Be specific!**
 
 In your explanations, you may want to answer:
 
@@ -9,7 +9,7 @@ In your explanations, you may want to answer:
 - Which technique did you use, on which line numbers?
 - What assumptions did you have about each line of code, and which ones were proven to be wrong?
 
-_Example: I noticed that the program should show pizza orders once a new order is made, and that it wasn't showing any. So, I used the trace forward technique starting on line 13. I discovered the bug on line 27 was caused by a typo of 'pzza' instead of 'pizza'._
+_Example: I noticed that the program should show pizza orders once a new order is made and that it wasn't showing any. So, I used the trace forward technique starting on line 13. I discovered the bug on line 27 was caused by a typo of 'pzza' instead of 'pizza'._
 
 _Then I noticed another bug ..._
 
@@ -102,7 +102,7 @@ Solution: Add this line after line 70 `if order_name and pizza_size_str and crus
 
 Error: "KeyError: 'name'"
 Debugging technique: Trace backward
-Solution: It shows that there is a problem accessing the field in result_json object. We print out the result_json object and it shows that we are not passing correct parameters.
+Solution: It shows that there is a problem accessing the field in result_json object. We print out the result_json object and it shows that we are not passing the correct parameters.
 Solution:  Change Line 38, 39
 
 ```python
@@ -121,7 +121,7 @@ to
 
 Error: "KeyError: 'name'"
 Debugging technique: Trace backward
-Solution: We still could not get correct result_json. We got an response of `{'cod': '400', 'message': 'Nothing to geocode'}` We cheked the Open Weather API documentation and discovered that the param name of the city should be `q`
+Solution: We still could not get the correct result_json. We got a response of `{'cod': '400', 'message': 'Nothing to geocode'}` We checked the Open Weather API documentation and discovered that the param name of the city should be `q`
 
 Change line 44 
 
@@ -168,9 +168,9 @@ Error: The sorted list is expected to be `[9, 7, 6, 5, 4, 3, 2, 1]` but the actu
 Debugging technique: Trace forward
 Solution: Add this line to `k += 1` line 35, 40
 
-3nd bug 
+3rd bug
 
-Error:"TypeError: list indices must be integers or slices, not float"
+Error: "TypeError: list indices must be integers or slices, not float"
 Debugging technique: Trace backward
 Solution: Change line 50
 
